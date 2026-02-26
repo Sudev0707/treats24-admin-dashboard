@@ -1,0 +1,254 @@
+================================================================================
+TREATS24 ADMIN DASHBOARD - PROJECT CV EXPLANATION
+================================================================================
+
+PROJECT OVERVIEW
+----------------
+Treats24 Admin Dashboard is a comprehensive admin panel for a food delivery 
+platform called "Treats 24". It enables administrators to manage customers, 
+restaurant partners, orders, menus, promotions, deliveries, and analytics.
+
+TECHNOLOGY STACK
+----------------
+• Frontend Framework: React 18 with TypeScript
+• Build Tool: Vite
+• Styling: Tailwind CSS with shadcn/ui component library
+• Routing: React Router DOM v6
+• State Management: Zustand with persist middleware
+• Data Fetching: TanStack Query (React Query)
+• Charts: Recharts library
+• Form Handling: React Hook Form with Zod validation
+• UI Components: Radix UI primitives
+• Icons: Lucide React
+• Date Handling: date-fns
+• HTTP Client: Axios (ready for API integration)
+• Testing: Vitest with React Testing Library
+
+================================================================================
+MAJOR FEATURES IMPLEMENTATION
+================================================================================
+
+1. AUTHENTICATION SYSTEM
+------------------------
+Implementation: src/store/authStore.ts
+- Multi-role authentication (ADMIN, SUPPORT, FINANCE)
+- JWT token-based session management
+- Persistent login state using Zustand persist middleware
+- Role-based permissions system with granular access control
+- Protected routes with automatic redirect
+- Login page with form validation
+
+Roles & Permissions:
+• ADMIN: Full access to all features
+• SUPPORT: Dashboard, Users, Partners, Orders, Notifications
+• FINANCE: Dashboard, Finance, Partners, Orders, Analytics
+
+2. DASHBOARD
+------------
+Implementation: src/modules/dashboard/DashboardPage.tsx
+- Real-time statistics cards (Total Users, Partners, Orders, Revenue)
+- Growth rate indicators
+- Quick action buttons
+- Recent activity feed
+- Revenue overview chart
+- Order status distribution
+
+3. USER MANAGEMENT
+------------------
+Implementation: src/modules/users/UsersPage.tsx
+- User list with search and filtering
+- User status management (active/blocked/pending)
+- Wallet balance tracking
+- Order history per user
+- User details drawer with full profile
+- Pagination support
+
+4. PARTNER MANAGEMENT
+---------------------
+Implementation: src/modules/partners/PartnersPage.tsx
+- Restaurant partner directory
+- Approval workflow for new partners
+- Partner document verification
+- Performance metrics (rating, orders, revenue)
+- Commission rate configuration
+- Partner status management
+- Partner details modal
+
+5. ORDER MANAGEMENT
+-------------------
+Implementation: src/modules/orders/OrdersPage.tsx
+- Comprehensive order listing
+- Multi-status filtering (pending, confirmed, preparing, ready, 
+  picked_up, delivered, cancelled, refunded)
+- Search by order ID, customer, or partner
+- Order details drawer with full timeline
+- Status update functionality
+- Order cancellation
+- Payment status tracking
+- Delivery partner assignment
+
+6. MENU MANAGEMENT
+------------------
+Implementation: src/modules/menu/MenuPage.tsx
+- Menu items catalog
+- Category-based organization
+- Availability toggle
+- Stock management
+- Price configuration
+- Partner-wise menu access
+
+7. DELIVERY MANAGEMENT
+---------------------
+Implementation: src/modules/delivery/DeliveryPage.tsx
+- Delivery partner directory
+- Status tracking (available, busy, offline)
+- Performance metrics
+- Earnings tracking
+- Vehicle type management
+
+8. FINANCE & REVENUE
+-------------------
+Implementation: src/modules/finance/FinancePage.tsx
+- Revenue analytics
+- Commission tracking
+- Payment settlements
+- Financial reports
+- Transaction history
+
+9. OFFERS & PROMOTIONS
+---------------------
+Implementation: src/modules/offers/OffersPage.tsx
+- Coupon code management
+- Discount configuration (percentage/fixed)
+- Usage limits and conditions
+- Target audience selection
+- Campaign scheduling
+- Validity period management
+
+10. NOTIFICATIONS SYSTEM
+-----------------------
+Implementation: src/modules/notifications/NotificationsPage.tsx
+- Push notification management
+- SMS and email campaigns
+- Target audience selection (all users, all partners, specific)
+- Scheduling functionality
+- Status tracking (draft, scheduled, sent)
+
+11. CMS (CONTENT MANAGEMENT)
+---------------------------
+Implementation: src/modules/cms/CMSPage.tsx
+- Banner management
+- Homepage content
+- Category banners
+- Partner promotions
+- Content scheduling
+- Active/inactive toggle
+
+12. ANALYTICS DASHBOARD
+----------------------
+Implementation: src/modules/analytics/AnalyticsPage.tsx
+- Interactive charts using Recharts:
+  • Line charts for trends (orders, users, partners)
+  • Area charts for revenue visualization
+  • Bar charts for comparative analysis
+  • Pie charts for distribution
+- Date range filtering (7 days, 30 days, 90 days, 1 year)
+- Export functionality
+- Real-time data visualization
+
+13. SETTINGS
+-----------
+Implementation: src/modules/settings/SettingsPage.tsx
+- Platform configuration
+- Delivery fee settings
+- Tax rate configuration
+- Commission rates
+- Maintenance mode
+- App version management
+
+14. ADMIN USER MANAGEMENT
+------------------------
+Implementation: src/modules/admin-users/AdminUsersPage.tsx
+- Admin user directory
+- Role assignment
+- Activity tracking
+- Account management
+
+================================================================================
+KEY IMPLEMENTATION HIGHLIGHTS
+================================================================================
+
+1. COMPONENT ARCHITECTURE
+- Modular page structure in src/modules/
+- Reusable UI components in src/components/
+- Shared utilities in src/utils/
+- Type definitions in src/types/
+- Services layer for API calls in src/services/
+
+2. STATE MANAGEMENT
+- Zustand stores: authStore.ts, uiStore.ts
+- Persisted authentication state
+- Optimistic updates ready
+
+3. ROUTING
+- React Router DOM v6
+- Nested layouts (DashboardLayout)
+- Protected route wrapper
+- 404 handling
+
+4. UI/UX FEATURES
+- Responsive design (mobile, tablet, desktop)
+- Loading skeletons
+- Empty states
+- Toast notifications (sonner)
+- Drawers for details
+- Dropdown menus
+- Form validation
+- Date pickers
+
+5. TYPE SAFETY
+- Comprehensive TypeScript interfaces
+- Type-safe API responses
+- Generic types for components
+
+6. CODE QUALITY
+- ESLint configuration
+- Vitest unit tests setup
+- TypeScript strict mode
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+src/
+├── auth/           # Authentication pages and guards
+├── charts/         # Recharts wrapper components
+├── components/     # Reusable UI components
+│   └── ui/         # shadcn/ui components
+├── hooks/          # Custom React hooks
+├── layouts/        # Page layouts
+├── modules/        # Feature modules/pages
+├── pages/          # Error pages
+├── services/       # API services and mock data
+├── store/          # Zustand state stores
+├── types/          # TypeScript type definitions
+└── utils/          # Utility functions
+
+================================================================================
+CV SUMMARY - KEY POINTS TO MENTION
+================================================================================
+
+✓ Built a complete admin dashboard for a food delivery platform
+✓ Implemented role-based authentication and authorization system
+✓ Created 12+ feature modules (Users, Partners, Orders, Menu, Delivery, 
+  Finance, Offers, Notifications, CMS, Analytics, Settings, Admin Users)
+✓ Integrated interactive charts and data visualization
+✓ Built responsive UI with modern component library
+✓ Implemented state management with Zustand
+✓ Used TypeScript for type-safe development
+✓ Set up React Query for data fetching architecture
+✓ Created protected routes with permission-based access control
+✓ Implemented search, filtering, and pagination in data tables
+✓ Built reusable component library following best practices
+
+================================================================================
